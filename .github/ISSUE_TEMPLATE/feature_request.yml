@@ -1,0 +1,117 @@
+name: ✨ Request a Feature
+description: Suggest an improvement that makes Symfony development in VS Code faster or clearer.
+title: "[FEATURE]: <Short description>"
+labels: ["feature-request", "pending-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Help shape the future of SymfonyKD. 🚀
+        Tell us what workflow, Symfony concept, or VS Code experience you want improved.
+        The best feature requests describe the developer pain point, the expected workflow, and why it matters in real projects.
+
+  - type: input
+    id: summary
+    attributes:
+      label: What feature would you like?
+      description: Summarize the request in one sentence.
+      placeholder: "e.g., Add autocompletion for service IDs inside YAML configuration files."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the current pain point in your Symfony + VS Code workflow.
+      placeholder: "e.g., I have to jump between config files and container debug output to find valid service IDs."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you expect the feature to work.
+      placeholder: |
+        I would like SymfonyKD to ...
+        It should appear when ...
+        It should use data from ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Share any workarounds, existing tools, or different approaches you tried.
+      placeholder: "e.g., I currently run bin/console debug:container manually and copy values into config files."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: feature_area
+    attributes:
+      label: Feature area
+      description: Which part of SymfonyKD would this improve?
+      options:
+        - Language Server
+        - Chat Participant / Commands
+        - Sidebar / Explorer
+        - Console Commands
+        - Configuration
+        - Installation / Activation
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project_size
+    attributes:
+      label: What kind of Symfony projects would benefit most?
+      description: This helps prioritize real-world workflows and edge cases.
+      options:
+        - Small/Personal projects
+        - Mid-size agency projects
+        - Massive enterprise legacy monoliths
+        - Open Source / Bundles
+        - All Symfony projects
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to your workflow?
+      description: Choose the option that best matches your day-to-day need.
+      options:
+        - Nice to have
+        - Saves regular manual work
+        - Blocks adopting SymfonyKD in my project/team
+        - Critical for large or legacy projects
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or references
+      description: Add sample code, screenshots, links, or Symfony documentation references that explain the request.
+      placeholder: "Paste examples or links here..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm before submitting.
+      options:
+        - label: I searched existing issues and did not find a duplicate request.
+          required: true
+        - label: This request is about SymfonyKD, Symfony development in VS Code, or related documentation.
+          required: true
+        - label: I am willing to provide feedback or test an early implementation if needed.
+          required: false

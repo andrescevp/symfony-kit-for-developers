@@ -1,0 +1,57 @@
+name: ⚡ Apply for the Insiders Program
+description: Get early access to unreleased features and shape the future of Symfony DX.
+title: "[INSIDER]: <Your GitHub Username>"
+labels: ["insider-application", "pending-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome to the bleeding edge. 🩸
+        We are building the ultimate AST-based Language Server for Symfony in VS Code. 
+        As an Insider, you get **early access to pre-release builds (.vsix)**, direct influence on the roadmap, and a **lifetime Hardcore Developer license** upon official release. 
+        
+        We are looking for active developers willing to test new features in real-world scenarios and report back.
+
+  - type: input
+    id: role
+    attributes:
+      label: What is your current role/experience with Symfony?
+      description: e.g., Senior Backend Engineer, Freelancer, Junior Dev.
+      placeholder: "e.g., Lead Dev working with Symfony for 5 years"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project_size
+    attributes:
+      label: What kind of Symfony projects do you mostly work on?
+      description: This helps us understand if we are testing edge cases on large codebases.
+      options:
+        - Small/Personal projects
+        - Mid-size agency projects
+        - Massive enterprise legacy monoliths (The real deal)
+        - Open Source / Bundles
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want to join the Insiders Program?
+      description: What is your biggest pain point with VS Code and Symfony right now?
+      placeholder: "I'm tired of extensions crashing when my Twig files inherit 3 levels deep..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: the_pact
+    attributes:
+      label: The Insider Pact
+      description: Please acknowledge the following before applying.
+      options:
+        - label: I understand that Insider builds are experimental and things might break.
+          required: true
+        - label: I commit to actively providing feedback and opening issues for bugs I find.
+          required: true
+        - label: I understand that the Insider builds (VSIX files) are for my personal use only and should not be shared publicly.
+          required: true

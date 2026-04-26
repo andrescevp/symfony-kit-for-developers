@@ -1,0 +1,27 @@
+<svg width="1024" height="560" viewBox="0 0 1024 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Symfony Kit console mark</title>
+  <desc id="desc">A minimal console-style prompt that reads greater-than sf, with sf in italic monospace type.</desc>
+  <defs>
+    <linearGradient id="sf-blue" x1="450" y1="135" x2="720" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5BB6F2" />
+      <stop offset="0.54" stop-color="#2D94DB" />
+      <stop offset="1" stop-color="#176FAF" />
+    </linearGradient>
+    <filter id="soft-shadow" x="150" y="105" width="750" height="350" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.28" />
+    </filter>
+  </defs>
+
+  <g
+    filter="url(#soft-shadow)"
+    font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'Liberation Mono', Menlo, Monaco, monospace"
+    font-size="230"
+    font-weight="800"
+    dominant-baseline="middle"
+    text-anchor="middle"
+  >
+    <text x="512" y="280" fill="#E6EDF3" stroke="#0E1B2C" stroke-width="16" paint-order="stroke fill">
+      <tspan>&gt;</tspan><tspan dx="28" fill="url(#sf-blue)" font-style="italic">sf</tspan>
+    </text>
+  </g>
+</svg>

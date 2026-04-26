@@ -1,0 +1,142 @@
+name: 🐛 Report a Bug
+description: Report a reproducible problem in SymfonyKD and help us improve Symfony DX.
+title: "[BUG]: <Short description>"
+labels: ["bug", "pending-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for helping us make SymfonyKD better. 🛠️
+        Please share enough detail for us to reproduce the issue in a real Symfony project.
+        Clear reports help us fix crashes, incorrect analysis, completion problems, and language server edge cases faster.
+
+  - type: input
+    id: summary
+    attributes:
+      label: What happened?
+      description: Summarize the bug in one sentence.
+      placeholder: "e.g., Route autocompletion stops working after opening a large controller."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps needed to trigger the issue.
+      placeholder: |
+        1. Open a Symfony project with ...
+        2. Go to ...
+        3. Run ...
+        4. See ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect SymfonyKD to do?
+      placeholder: "e.g., The route list should appear and include routes from attributes and YAML files."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include screenshots or recordings if helpful.
+      placeholder: "e.g., The completion list is empty and the language server logs show ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Affected area
+      description: Which part of SymfonyKD seems affected?
+      options:
+        - Language Server
+        - Chat Participant / Commands
+        - Sidebar / Explorer
+        - Console Commands
+        - Configuration
+        - Installation / Activation
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: extension_version
+    attributes:
+      label: SymfonyKD version
+      description: Find this in the VS Code Extensions view.
+      placeholder: "e.g., 0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: vscode_version
+    attributes:
+      label: VS Code version
+      description: Copy from Help → About if possible.
+      placeholder: "e.g., 1.99.0"
+    validations:
+      required: true
+
+  - type: input
+    id: symfony_version
+    attributes:
+      label: Symfony version
+      description: If relevant, share the Symfony version used by the project.
+      placeholder: "e.g., 6.4, 7.2, or not applicable"
+    validations:
+      required: false
+
+  - type: input
+    id: php_version
+    attributes:
+      label: PHP version
+      description: If relevant, share the PHP version used by the project.
+      placeholder: "e.g., 8.2, 8.3, or not applicable"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: project_size
+    attributes:
+      label: What kind of Symfony project reproduces this?
+      description: This helps us understand scale-related edge cases.
+      options:
+        - Small/Personal project
+        - Mid-size agency project
+        - Massive enterprise legacy monolith
+        - Open Source / Bundle
+        - Minimal reproduction only
+        - Not project-specific
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and diagnostics
+      description: Paste relevant SymfonyKD, VS Code, or language server logs. Remove secrets before submitting.
+      render: shell
+      placeholder: "Paste logs here..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm before submitting.
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I removed secrets, tokens, private URLs, and sensitive project data from this report.
+          required: true
+        - label: I can provide more details or a minimal reproduction if needed.
+          required: false
